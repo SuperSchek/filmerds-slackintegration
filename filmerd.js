@@ -1,6 +1,7 @@
 var Botkit = require('botkit');
 var Store = require("jfs");
 var db = new Store("data");
+var port = process.env.port || 3000;
 
 var slackToken = process.env.SLACK_TOKEN;
 
@@ -16,6 +17,12 @@ controller.hears(["Hey, filmerd"],["direct_message", "mention"], function(bot, m
 controller.hears(["youtube"],["direct_message", "mention"], function(bot, message) {
     console.log(message);
     bot.reply(message, "Running YouTube API Authentication Test");
+});
+
+controller.setupWebserver(port,function(err,webserver) {
+
+    controller.createWebhookEndpoints(controller.webserver);
+
 });
 
 controller.on('filmerd', function(bot, message) {
