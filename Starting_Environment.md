@@ -1,0 +1,2 @@
+// WINDOWS MACHINE
+SET SLACK_TOKEN=xoxb-24225759921-z2ejrmV4b90qPqnm6qOrihDJ && npm start

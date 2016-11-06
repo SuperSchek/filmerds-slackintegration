@@ -4,11 +4,12 @@
   "description": "Filmerds Slack bot to make our lives easier.",
   "main": "filmerd.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node filmerd.js"
   },
   "author": "SuperSchek (Sander Schekman)",
   "license": "ISC",
   "dependencies": {
-    "botkit": "^0.4.0"
+    "botkit": "^0.4.0",
+    "jfs": "^0.2.6"
   }
 }
